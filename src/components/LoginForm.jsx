@@ -32,7 +32,7 @@ const Login = () => {
       </div>
       <div
         className="border-1 z-10 flex w-full flex-col items-center justify-center rounded-tl-3xl rounded-tr-3xl 
-                  border-[#E4E7E8] bg-[var(--bg-color)] p-16 md:rounded-bl-3xl md:rounded-tl-3xl"
+                  border-[#E4E7E8] bg-[var(--bg-color)] p-16 md:rounded-bl-3xl md:rounded-tl-3xl md:rounded-tr-none"
       >
         <Form method="post" className="flex w-2/3 flex-col gap-4">
           <div className=" flex flex-col items-center justify-center gap-3">

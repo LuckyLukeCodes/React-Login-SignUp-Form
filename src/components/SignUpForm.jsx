@@ -23,10 +23,10 @@ export const action = async ({ request }) => {
 const SignUpForm = () => {
   const { isLoginForm, setIsLoginForm } = useHomeContext();
   return (
-    <div className="grid h-screen md:grid-cols-2">
+    <div className="grid h-screen transition-all duration-300 ease-linear md:grid-cols-2">
       <div
         className="border-1 z-10 flex w-full flex-col items-center justify-center rounded-bl-3xl rounded-br-3xl border-[#E4E7E8] 
-                    bg-[var(--bg-color)] p-16 md:rounded-br-3xl md:rounded-tr-3xl"
+                    bg-[var(--bg-color)] p-16 md:rounded-bl-none md:rounded-br-3xl md:rounded-tr-3xl"
       >
         <Form method="post" className="flex w-2/3 flex-col gap-4">
           <div className=" flex flex-col items-center justify-center gap-3">
