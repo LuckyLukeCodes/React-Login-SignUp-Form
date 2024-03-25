@@ -1,6 +1,6 @@
 const Logo = () => {
   return (
-    <div className="rounded-full border-2 border-slate-200 bg-slate-100 p-4">
+    <div className="mb-3 rounded-full border-2 border-slate-200 bg-slate-100 p-4">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

@@ -5,13 +5,30 @@ import { useHomeContext } from "../pages/HomeLayout";
 import Logo from "./Logo";
 import chemistry from "../assets/images/chemistry.svg";
 import Blob from "./Blob";
+import { Form } from "react-router-dom";
+
+export const action = async ({ request }) => {
+  const formData = await request.formData();
+  const data = Object.fromEntries(formData);
+  try {
+    console.log(data);
+    toast.success("Login Successful");
+    return redirect("/home");
+  } catch (error) {
+    toast.error(error?.response?.data?.message);
+    return error;
+  }
+};
 
 const SignUpForm = () => {
   const { isLoginForm, setIsLoginForm } = useHomeContext();
   return (
-    <div className="flex h-screen">
-      <div className="border-1 z-10 flex w-full flex-col items-center justify-center rounded-br-3xl rounded-tr-3xl border-[#E4E7E8] bg-[var(--bg-color)] transition-all delay-150 ease-linear">
-        <form method="post" className="flex w-2/3 flex-col gap-4">
+    <div className="grid h-screen md:grid-cols-2">
+      <div
+        className="border-1 z-10 flex w-full flex-col items-center justify-center rounded-bl-3xl rounded-br-3xl border-[#E4E7E8] 
+                    bg-[var(--bg-color)] p-16 md:rounded-br-3xl md:rounded-tr-3xl"
+      >
+        <Form method="post" className="flex w-2/3 flex-col gap-4">
           <div className=" flex flex-col items-center justify-center gap-3">
             <Logo />
             <h1 className="text-3xl">Welcome to the club!</h1>
@@ -32,29 +49,28 @@ const SignUpForm = () => {
             <p>Already a member?</p>
             <button
               onClick={() => setIsLoginForm(!isLoginForm)}
-              className="text-blue-500"
+              className="text-blue-500 hover:underline"
             >
               Login
             </button>
           </div>
-        </form>
+        </Form>
       </div>
-      <div className=" flex w-full flex-col items-center justify-center  bg-blue-600">
-        <div className="absolute -top-24 right-[40%]  h-72 w-72">
+      <div className="flex w-full flex-col items-center justify-center  bg-blue-600">
+        <div className="absolute right-[5%] h-72 w-72  md:-top-24 md:right-[45%]">
           <Blob />
         </div>
-        <div className="absolute -right-[8%] h-72 w-72">
+        <div className="absolute h-72 w-72 md:-right-[6%]">
           <Blob />
         </div>
-        <div className="absolute bottom-8 right-[43%]  h-72 w-72">
+        <div className="absolute h-72 w-72  md:bottom-[8.5rem] md:right-[45%]">
           <Blob />
         </div>
-
-        <img src={chemistry} alt="" className="h-72 w-72" />
-        <h1 className="mb-2 text-3xl font-semibold text-[var(--text-color)]">
+        <img src={chemistry} alt="" className="z-10 mb-3 h-72 w-72" />
+        <h1 className="z-10 mb-3 text-3xl font-semibold text-[var(--text-color)]">
           The World is your Laboratory!
         </h1>
-        <span className="z-10 text-center text-[var(--text-color)]">
+        <span className="z-10 mx-14 text-center text-[var(--text-color)]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
           magni ullam, ad pariatur cumque numquam inventore adipisci.{" "}
         </span>

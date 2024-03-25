@@ -6,6 +6,12 @@ const FormRow = ({ name }) => {
       <input
         type={name}
         id={name}
+        aria-autocomplete="both"
+        aria-haspopup="false"
+        autoCapitalize="off"
+        autoComplete="off"
+        autoCorrect="off"
+        autoFocus=""
         required
         className="peer h-14 w-full rounded-lg  bg-gray-100 px-4 text-sm outline-none"
       />
