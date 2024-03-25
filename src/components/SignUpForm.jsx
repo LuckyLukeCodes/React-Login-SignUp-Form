@@ -23,7 +23,7 @@ export const action = async ({ request }) => {
 const SignUpForm = () => {
   const { isLoginForm, setIsLoginForm } = useHomeContext();
   return (
-    <div className="grid h-screen transition-all duration-300 ease-linear md:grid-cols-2">
+    <div className="grid h-screen md:grid-cols-2">
       <div
         className="border-1 z-10 flex w-full flex-col items-center justify-center rounded-bl-3xl rounded-br-3xl border-[#E4E7E8] 
                     bg-[var(--bg-color)] p-16 md:rounded-bl-none md:rounded-br-3xl md:rounded-tr-3xl"
@@ -31,7 +31,7 @@ const SignUpForm = () => {
         <Form method="post" className="flex w-2/3 flex-col gap-4">
           <div className=" flex flex-col items-center justify-center gap-3">
             <Logo />
-            <h1 className="text-3xl">Welcome to the club!</h1>
+            <h1 className="text-3xl">Welcome to the Club!</h1>
             <span className="mb-4 h-12 text-center text-sm text-slate-400">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Necessitatibus pariatur ducimus ipsa.
@@ -56,7 +56,7 @@ const SignUpForm = () => {
           </div>
         </Form>
       </div>
-      <div className="flex w-full flex-col items-center justify-center  bg-blue-600">
+      <div className="flex w-full flex-col items-center justify-center bg-blue-600">
         <div className="absolute right-[5%] h-72 w-72  md:-top-24 md:right-[45%]">
           <Blob />
         </div>

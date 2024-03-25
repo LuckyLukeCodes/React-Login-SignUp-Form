@@ -11,7 +11,7 @@ const Login = () => {
 
   return (
     <div className="grid h-screen md:grid-cols-2">
-      <div className="flex h-screen w-full flex-col items-center justify-center bg-blue-600">
+      <div className="flex h-screen w-full flex-col items-center justify-center bg-blue-600 transition-all duration-300 ease-linear">
         <div className="absolute -top-24 right-0 h-72 w-72 md:right-[47%]">
           <Blob />
         </div>

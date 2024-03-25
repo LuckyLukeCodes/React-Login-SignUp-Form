@@ -8,7 +8,6 @@ export const action = async ({ request }) => {
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
   try {
-    console.log(data);
     toast.success("Login Successful");
     return redirect("/home");
   } catch (error) {
